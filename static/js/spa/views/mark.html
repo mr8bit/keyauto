@@ -1,0 +1,48 @@
+<div class="container "   style="width: 1080px">
+    <div class="row panel-new-auto">
+        <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+            <div class="col-md-12  ">
+                <h1 style="padding-bottom: 10px">Новые автомобили в наличии</h1>
+                <div style="color: white;font-size: 18px;margin-top: -15px;margin-bottom: 20px">Выберите
+                    интересующую вас марку автомобиля
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="background-color: #ffffff;margin-top:-5px">
+        <div class="container-fluid" style="overflow-y: scroll;height: 1646px;padding-left: 0px;padding-right: 0px">
+            <div ng-repeat="mark in marks" style="       width: 1080px;   padding: 0;    margin: 0 auto; padding: 0;">
+                <div class="col-md-12 panel-new-auto">
+                    <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+                        <div class="col-md-12  ">
+                            <h1 style="padding-bottom: 10px">  {{ mark.name }} в наличии</h1>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 card-auto " ng-repeat="model in mark.models">
+                    <a href="/#!/auto/mark/{{ model.id }}">
+                    <div class="thumbnail_container" style="padding-bottom: 78%">
+                        <div class="thumbnail">
+                            <img ng-src="{{ model.image }}" class="img-responsive">
+                            <div style="    position: absolute;    bottom: -25px; font-size: 20px"> {{ model.name }}
+                                <span style="    background-color: #35abdd;   font-size: 19px;    padding: 12px;    border-radius: 30px;    color: white;"> >{{ model.count }} </span>
+                            </div>
+                            <div style="    position: absolute;  font-size: 23px ;font-weight: bold; bottom: -65px;">
+                                <span style="font-weight: 100; font-size: 19px">от</span> {{ model.min_price }} руб.
+                            </div>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <script>
+        $(".navbar-brand").addClass('navbar-brand-sec');
+    </script>
+</div>

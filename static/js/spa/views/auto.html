@@ -1,0 +1,28 @@
+<div class="container " style="width: 1080px">
+    <div class="row panel-new-auto">
+        <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+            <div class="col-md-12  ">
+                <h1 style="padding-bottom: 10px">Новые автомобили в наличии</h1>
+                <div style="color: white;font-size: 18px;margin-top: -15px;margin-bottom: 20px">Выберите
+                    интересующую вас марку автомобиля
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="background-color: #ffffff;margin-top:-5px">
+        <div class="container-fluid" style="overflow-y: scroll;height: 1645px;padding-left: 0px;padding-right: 0px">
+            <div ng-repeat="mark in marks" style="       width: 1080px;   padding: 0;    margin: 0 auto; padding: 0;">
+                <div class="col-md-3 card-auto " ng-repeat="mark in marks">
+                    <a href="/#!/auto/mark/{{ model.id }}">
+                        <div class="thumbnail_container" style="padding-bottom: 78%">
+                            <div class="thumbnail">
+                                <img ng-src="{{ mark.image }}" class="img-responsive">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

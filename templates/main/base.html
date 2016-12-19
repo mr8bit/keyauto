@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ключ авто</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body ng-app="questApp">
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand navbar-brand-sec" href="#">
+                <img id="back"  class="back-none" onclick="goBack()"   src="/static/img/back.png" style="float: left; margin-right: 30px;">
+                <img alt="Brand" src="{% static 'img/logo.png' %}">
+            </a>
+        </div>
+        <div   class="navbar-collapse collapse" >
+
+    <ul id="printer" class="nav navbar-nav navbar-right" style="height: 65px;margin-top: 45px; display: none">
+                <img id="back"  class="back-none" onclick="goBack()"   src="/static/img/share.png   " style="float: left; margin-right: 30px;">
+                <img id="back"  class="back-none" onclick="goBack()"   src="/static/img/printer.png" style="float: left; margin-right: 30px;">
+                <img id="back"  class="back-none" onclick="goMain()"   src="/static/img/menu.png" style="float: left; margin-right: 30px;">
+    </ul>
+  </div>
+    </div>
+</nav>
+{% verbatim %}
+<div class="view-container">
+    <div ng-show="AILoading" id="loader-wrapper">
+        <div class="preloader">
+                <img alt="Brand" src="/static/img/logo.png">
+        </div>
+    </div>
+    <div ng-hide="AILoading" ng-view></div>
+</div>
+{% endverbatim %}
+
+<script src="{% static 'js/bower_components/angular/angular.min.js' %}"></script>
+<script src="{% static 'js/bower_components/angular-route/angular-route.min.js' %}"></script>
+<script src="{% static 'js/bower_components/angular-animate/angular-animate.min.js' %}"></script>
+<script src="{% static 'js/bower_components/ngActivityIndicator/ngActivityIndicator.min.js' %}"></script>
+<script src="{% static 'js/spa/app.js' %}"></script>
+<script src="{% static 'js/spa/controller.js' %}"></script>
+<script type="text/javascript">
+    function goBack() {
+        window.history.back();
+    }
+    ;
+    function goMain() {
+        window.location.hash = "#";
+
+    }
+</script>
+</body>
+</html>

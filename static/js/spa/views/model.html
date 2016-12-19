@@ -1,0 +1,408 @@
+<div class="container " style="width: 1080px">
+    <div class="row panel-new-auto">
+        <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+            <div class="col-md-12  ">
+                <h1 style="padding-bottom: 10px">{{ model.mark }} {{ model.model.name }}</h1>
+
+            </div>
+        </div>
+    </div>
+    <div class="row " style="background-color: #ffffff;margin-top:-5px">
+        <div class="container-fluid" style="overflow-y: scroll;height: 1677px;">
+            <div class="row">
+                <div style="margin-top: 30px" class="col-md-12">
+                    <div style="font-size: 42px;font-weight: bold;color: #000000;"><span
+                            style="color: #727a7f;font-weight: normal;font-size: 18px">Цена автомобиля:</span> {{ model.s_price }}
+                        руб.
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px">
+                <div class="icon-text">
+                    <div style="width: 30px;float: left;padding-right: 5px;">
+                        <img style="margin-top: 10px;" src="/static/img/bensis.png">
+                    </div>
+                    <div style="width: 205px;float: left;padding-left: 5px;">
+                        <div style="color:#727a7f;font-size: 18px">Бензин:</div>
+                    </div>
+                </div>
+                <div class="icon-text">
+                    <div style="width: 47px;float: left;padding-right: 5px;">
+                        <img style="margin-top: 10px;" src="/static/img/power.png">
+                    </div>
+                    <div style="width: 183px;float: left;padding-left: 5px;">
+                        <div style="color:#727a7f;font-size: 18px">Мощность:</div>
+                        <div style="color: #000000; font-size:18px ">{{ model.horse_power }} л.с.</div>
+                    </div>
+                </div>
+                <div class="icon-text">
+                    <div style="width: 35px;float: left;padding-right: 5px;">
+                        <img style="margin-top: 10px;" src="/static/img/type.png">
+                    </div>
+                    <div style="width: 200px;float: left;padding-left: 5px;">
+                        <div style="color:#727a7f;font-size: 18px">Тип привода:</div>
+                        <div style="color: #000000; font-size:18px "></div>
+                    </div>
+                </div>
+                <div class="icon-text">
+                    <div style="width: 55px;float: left;padding-right: 5px;">
+                        <div><img style="margin-top: 10px;" src="/static/img/auto.png"></div>
+
+                    </div>
+                    <div style="width: 180px;float: left;padding-left: 5px;">
+                        <div style="color:#727a7f;font-size: 18px">Коробка передач:</div>
+                        <div style="color: #000000; font-size:18px ">{{ model.transmission }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 40px">
+                <div class="icon-text" style="width: 300px">
+                    <div style="width: 50px;float: left;padding-right: 7px;">
+                        <div style="width: 50px;height: 50px;background: {{ color }};    border: 1px solid #ccc;">
+
+
+                        </div>
+                    </div>
+                    <div style="width: 205px;float: left;padding-left: 7px;">
+                        <div style="color:#727a7f;font-size: 18px">Цвет:</div>
+                        <div style="color: #000000; font-size:18px "> {{ model.color }}  </div>
+
+
+                    </div>
+                </div>
+                <div class="col-md-12">
+
+
+                </div>
+            </div>
+            <div class="row" style="margin-top: 80px">
+                <div class=" ">
+                    <div class=" " id="slider">
+                        <div class=" " id="carousel-bounding-box">
+                            <div id="myCarousel" class="carousel slide" style="    padding: 0;">
+                                <!-- main slider carousel items -->
+                                <div class="col-md-1" style="    padding-top: 35%;">
+                                    <a style="margin-top: 150%;" class="  carousel-control" role="button"
+                                       ng-click="prev()" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                    </a>
+                                </div>
+                                <div class="col-md-10">
+                                    <center>
+                                        <div class="carousel-inner">
+                                            <div class="item active" data-slide-number="0">
+                                                <img ng-src="{{ model.images[0].url}}" class="img-responsive">
+                                            </div>
+                                            <div class="item " data-slide-number="{{$index+1}}"
+                                                 ng-repeat="image in model.images.slice(1, 12)">
+                                                <img ng-src="{{ image.url }}" class="img-responsive">
+                                            </div>
+                                        </div>
+                                    </center>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="  carousel-control" style="margin-top: 150%;    left: 20px;" role="button"
+                                       ng-click="next()" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/main slider carousel-->
+            </div><!--/row-->
+            <div class="row">
+                <div class=" ">
+                    <div class=" ">
+                        <div class=" ">
+                            <div id="Carousel" class="carousel slide" style="    padding: 0;">
+                                <!-- Carousel items -->
+                                <div class=" ">
+                                    <div class="col-md-1">
+                                        <a class="  carousel-control" role="button" ng-click="th_prev()"
+                                           data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <div class="row-fluid">
+                                                    <div class="col-md-3 "
+                                                         ng-repeat="image in model.images.slice(0, 4)">
+                                                        <a ng-click="carousel($event.currentTarget)"
+                                                           id="carousel-selector-{{$index}}">
+                                                            <img ng-src="{{ image.url }}"
+                                                                 class="img-responsive center-block default">
+                                                        </a>
+                                                    </div>
+                                                </div><!--/row-fluid-->
+                                            </div><!--/item-->
+                                            <div ng-if="model.images[4].url" class="item">
+                                                <div class="row-fluid">
+                                                    <div class="col-md-3 "
+                                                         ng-repeat="image in model.images.slice(4, 8)">
+                                                        <a ng-click="carousel($event.currentTarget)"
+                                                           id="carousel-selector-{{$index+4}}">
+                                                            <img ng-src="{{ image.url }}"
+                                                                 class="img-responsive center-block default">
+                                                        </a>
+                                                    </div>
+                                                </div><!--/row-fluid-->
+                                            </div><!--/item-->
+                                        </div><!--/carousel-inner-->
+
+                                    </div>
+                                    <div class="col-md-1">
+                                        <a class="  carousel-control" style="    left: 20px;" role="button"
+                                           ng-click="th_next()"
+                                           data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div><!--/myCarousel-->
+                        </div><!--/well-->
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 65px;background-color: #eff5f7;margin-left: -60px;margin-right: -60px;">
+                <div style="margin-left: 60px;    padding: 50px 0;">
+                    <div style="font-size: 18px;font-weight: normal;color: #000000;"><span
+                            style="color: #727a7f;font-weight: normal;font-size: 18px">Дилерский центр:</span> {{ model.seller.seller }}
+                    </div>
+                    <div style="font-size: 18px;font-weight: normal;color: #000000;">
+                        г. {{ model.seller.city }} {{ model.seller.adress }}
+                    </div>
+                    <div style="font-size: 24px;font-weight: normal;color: #000000;">
+                        {{ model.seller.phone }}
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px">
+                <div style="font-size: 42px;font-weight: normal;color: #36454e;">
+                    {{ model.mark }} {{ model.model.name }}
+                </div>
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>Комплектация</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Объем двигателя</td>
+                            <td>{{ model.displacement }}</td>
+                        </tr>
+                        <tr>
+                            <td>Привод</td>
+                            <td>{{ model.gear_type }}</td>
+                        </tr>
+                        <tr>
+                            <td>Трансмисия</td>
+                            <td>{{ model.transmission }}</td>
+                        </tr>
+                        <tr>
+                            <td>Цвет</td>
+                            <td>{{ model.color }}</td>
+                        </tr>
+                        <tr>
+                            <td>Салон</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Год выпуска</td>
+                            <td>{{ model.year }}</td>
+                        </tr>
+                        <tr>
+                            <td>VIN</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Статус</td>
+                            <td>{{ model.stock }}</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-12">
+                    <center>
+                        <a class="btn btn-call">
+                         <img src="/static/img/phone.png">   Перезвоните мне
+                        </a></center>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 50px">
+                <div style="font-size: 42px;font-weight: normal;color: #36454e;">
+                    Технические характеристики
+                </div>
+                <div class="col-md-12">
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>Кузов</td>
+                            <td>{{ model.body_type }}</td>
+                        </tr>
+                        <tr>
+                            <td>Тип топлива</td>
+                            <td>{{ model.engine_type }}</td>
+                        </tr>
+                        <tr>
+                            <td>Расход топлива - город</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Расход топлива - трасса</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Расход топлива - смешанный</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Объем бака</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Радиус разворота</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Макс. скорость</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Разгон до 100км/ч</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Типоразмер колес (мин)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Объем багажника</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Масса</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Клиренс</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Длина</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Ширина</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Высота</td>
+                            <td></td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                  <div class="col-md-12">
+                    <center>
+                        <a class="btn btn-call">
+                          <img src="/static/img/drive.png"> Записаться на тест-драйв
+                        </a></center>
+                </div>
+            </div>
+            <div class="row">
+                <div style="font-size: 36px;font-weight: normal;color: #36454e;">
+                    Комплектация
+                </div>
+                <div class="col-md-12">
+
+                    <div class="panel-group" id="accordion">
+                        <div class="collapse-close panel  ">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" ng-click="coll($event.currentTarget)"
+                                       style="    margin-left: 15px; font-size: 24px;" data-parent="#accordion"
+                                       data-target="#collapse1">
+                                        Общая информация</a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    <ul>
+                                        <li class="th" ng-repeat="th in model.tth track by $index">{{ th }}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-12" style="border:10px solid #eff5f7;padding: 20px 15px">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center>
+                                <div style="font-size: 36px;color: #36454e">
+                                    Зарезервировать {{ model.mark }} {{ model.model.name }}</div>
+                                <div style="font-size: 42px;font-weight: bold;color: #000000;"><span
+                                        style="font-weight: normal;font-size: 36px">Цена:</span> {{ model.s_price }}
+                                    руб.
+                                </div>
+                                <div style="font-size: 18px;color: #727a7f">Наш менеджер свяжиться с Вами в течении 30
+                                    минту (в рабочее время) для уточнения деталей бронирования.
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img class="img-responsive" ng-src="{{ model.images[0].url }}">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Выберите центр <span
+                                        class="required" style="color:#35abdd;">*</span></label>
+                                <select id="inputEmail3" class="form-control">
+                                    <option>Краснодар</option>
+                                    <option>Сочи</option>
+                                    <option>Москва</option>
+                                    <option>Адыгея</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Имя <span
+                                        class="required" style="color:#35abdd;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Контактный телефон <span
+                                        class="required" style="color:#35abdd;">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <center>
+                            <button class="btn btn-call"><img src="/static/img/plane.png"> Отправить заявку</button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+
+    </script>
+</div>

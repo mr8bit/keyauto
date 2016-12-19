@@ -1,0 +1,101 @@
+{% extends 'main/base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <div class="container" style="width: 100%">
+        <div class="row orange">
+            <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+                <div class="col-md-12  ">
+                    <h1 style="padding-bottom: 10px">Запись на сервисное обслуживание</h1>
+                </div>
+
+            </div>
+        </div>
+        <div class="row" style="background-color: #ffffff;margin-top:-5px">
+            <div class="container-fluid"
+                 style="overflow-y: scroll;height: 1610px;padding-left: 65px;padding-right: 65px">
+                <div class="description-form">
+                    Схема подачи заявок позволяет Вам сэкономить время на телефонных разговорах. Заполнив заявку на
+                    сервисное обслуживание, Вы можете быть уверены, что Вам перезвонят в ближайшее время для
+                    подтверждения и уточнения Ваших пожеланий. Заявка, отправленная в выходной или праздничный день,
+                    будет рассмотрена в ближайший будний день.
+                    <div class="attention-form">
+                        Будьте внимательны! Ограничение на ближайшую дату ТО составляет 3 дня. Поля, отмеченные
+                        звездочкой ”<span class="required">*</span>”, требуют обязательного заполнения
+                    </div>
+                </div>
+                <form class="form">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Вид работ <span class="required">*</span></label>
+                                <select id="inputEmail3" class="form-control">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Выберите город<span
+                                        class="required">*</span></label>
+                                <select id="inputEmail3" class="form-control">
+                                    <option>Краснодар</option>
+                                    <option>Сочи</option>
+                                    <option>Москва</option>
+                                    <option>Адыгея</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Модель автомобиля<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">ФИО<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Выберите центр<span
+                                        class="required">*</span></label>
+                                <select id="inputEmail3" class="form-control">
+                                    <option>Краснодар</option>
+                                    <option>Сочи</option>
+                                    <option>Москва</option>
+                                    <option>Адыгея</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Желаемая дата<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail3" class="control-label">Контактный телефон<span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4" style="padding: 0 50px">
+                            <button type="submit" class="btn btn-success">Отправить заявку</button>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            $(".navbar-brand").addClass('navbar-brand-sec');
+        </script>
+    </div>
+{% endblock %}

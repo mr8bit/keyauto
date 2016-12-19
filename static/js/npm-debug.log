@@ -1,0 +1,170 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'bower', '-g' ]
+2 info using npm@4.0.3
+3 info using node@v4.6.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData bower
+8 silly fetchNamedPackageData bower
+9 silly mapToRegistry name bower
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'bower',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'bower',
+12 silly mapToRegistry   name: 'bower',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/bower
+14 verbose request uri https://registry.npmjs.org/bower
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 2:56:02
+17 verbose request id d163fe76b409f937
+18 http request GET https://registry.npmjs.org/bower
+19 http 200 https://registry.npmjs.org/bower
+20 verbose headers { server: 'nginx/1.10.1',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'last-modified': 'Sat, 10 Dec 2016 17:14:12 GMT',
+20 verbose headers   etag: 'W/"584c37e4-2ac34"',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'content-length': '16311',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Sat, 10 Dec 2016 23:56:03 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '116',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-bma7032-BMA',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '1',
+20 verbose headers   'x-timer': 'S1481414163.068697,VS0,VE0',
+20 verbose headers   vary: 'Accept-Encoding' }
+21 silly get cb [ 200,
+21 silly get   { server: 'nginx/1.10.1',
+21 silly get     'content-type': 'application/json',
+21 silly get     'last-modified': 'Sat, 10 Dec 2016 17:14:12 GMT',
+21 silly get     etag: 'W/"584c37e4-2ac34"',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'content-length': '16311',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Sat, 10 Dec 2016 23:56:03 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '116',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-bma7032-BMA',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '1',
+21 silly get     'x-timer': 'S1481414163.068697,VS0,VE0',
+21 silly get     vary: 'Accept-Encoding' } ]
+22 verbose get saving bower to /home/cyber/.npm/registry.npmjs.org/bower/.cache.json
+23 verbose correctMkdir /home/cyber/.npm correctMkdir not in flight; initializing
+24 verbose makeDirectory /home/cyber/.npm creation not in flight; initializing
+25 silly makeDirectory /home/cyber/.npm uid: 1000 gid: 1001
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly resolveWithNewModule bower@1.8.0 checking installable status
+39 silly cache add args [ 'bower', null ]
+40 verbose cache add spec bower
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'bower',
+41 silly cache add   scope: null,
+41 silly cache add   escapedName: 'bower',
+41 silly cache add   name: 'bower',
+41 silly cache add   rawSpec: '',
+41 silly cache add   spec: 'latest',
+41 silly cache add   type: 'tag' }
+42 silly addNamed bower@latest
+43 verbose addNamed "latest" is being treated as a dist-tag for bower
+44 info addNameTag [ 'bower', 'latest' ]
+45 silly mapToRegistry name bower
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry data Result {
+48 silly mapToRegistry   raw: 'bower',
+48 silly mapToRegistry   scope: null,
+48 silly mapToRegistry   escapedName: 'bower',
+48 silly mapToRegistry   name: 'bower',
+48 silly mapToRegistry   rawSpec: '',
+48 silly mapToRegistry   spec: 'latest',
+48 silly mapToRegistry   type: 'tag' }
+49 silly mapToRegistry uri https://registry.npmjs.org/bower
+50 verbose addNameTag registry:https://registry.npmjs.org/bower not in flight; fetching
+51 verbose get https://registry.npmjs.org/bower not expired, no request
+52 silly addNameTag next cb for bower with tag latest
+53 silly addNamed bower@1.8.0
+54 verbose addNamed "1.8.0" is a plain semver version for bower
+55 silly mapToRegistry name bower
+56 silly mapToRegistry using default registry
+57 silly mapToRegistry registry https://registry.npmjs.org/
+58 silly mapToRegistry data Result {
+58 silly mapToRegistry   raw: 'bower',
+58 silly mapToRegistry   scope: null,
+58 silly mapToRegistry   escapedName: 'bower',
+58 silly mapToRegistry   name: 'bower',
+58 silly mapToRegistry   rawSpec: '',
+58 silly mapToRegistry   spec: 'latest',
+58 silly mapToRegistry   type: 'tag' }
+59 silly mapToRegistry uri https://registry.npmjs.org/bower
+60 verbose addRemoteTarball https://registry.npmjs.org/bower/-/bower-1.8.0.tgz not in flight; adding
+61 verbose addRemoteTarball [ 'https://registry.npmjs.org/bower/-/bower-1.8.0.tgz',
+61 verbose addRemoteTarball   '55dbebef0ad9155382d9e9d3e497c1372345b44a' ]
+62 info retry fetch attempt 1 at 2:56:03
+63 info attempt registry request try #1 at 2:56:03
+64 http fetch GET https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+65 http fetch 200 https://registry.npmjs.org/bower/-/bower-1.8.0.tgz
+66 silly fetchAndShaCheck shasum 55dbebef0ad9155382d9e9d3e497c1372345b44a
+67 verbose addTmpTarball /tmp/npm-5468-5d543db1/registry.npmjs.org/bower/-/bower-1.8.0.tgz not in flight; adding
+68 verbose addTmpTarball already have metadata; skipping unpack for bower@1.8.0
+69 verbose correctMkdir /home/cyber/.npm correctMkdir not in flight; initializing
+70 silly cache afterAdd bower@1.8.0
+71 verbose afterAdd /home/cyber/.npm/bower/1.8.0/package/package.json not in flight; writing
+72 verbose correctMkdir /home/cyber/.npm correctMkdir not in flight; initializing
+73 verbose afterAdd /home/cyber/.npm/bower/1.8.0/package/package.json written
+74 silly loadAllDepsIntoIdealTree Finishing
+75 silly loadIdealTree Finishing
+76 silly currentTree lib
+76 silly currentTree └── bower@1.8.0
+77 silly idealTree lib
+77 silly idealTree └── bower@1.8.0
+78 silly generateActionsToTake Starting
+79 silly install generateActionsToTake
+80 warn checkPermissions Missing write access to /usr/lib/node_modules/bower
+81 warn checkPermissions Missing write access to /usr/lib/node_modules
+82 silly rollbackFailedOptional Starting
+83 silly rollbackFailedOptional Finishing
+84 silly runTopLevelLifecycles Finishing
+85 silly install printInstalled
+86 verbose stack Error: EACCES: permission denied, access '/usr/lib/node_modules/bower'
+86 verbose stack     at Error (native)
+87 verbose cwd /home/cyber/PycharmProjects/keyauto/static/js
+88 error Linux 4.8.12-200.fc24.x86_64
+89 error argv "/usr/bin/node" "/usr/bin/npm" "install" "bower" "-g"
+90 error node v4.6.1
+91 error npm  v4.0.3
+92 error path /usr/lib/node_modules/bower
+93 error code EACCES
+94 error errno -13
+95 error syscall access
+96 error Error: EACCES: permission denied, access '/usr/lib/node_modules/bower'
+96 error     at Error (native)
+96 error  { [Error: EACCES: permission denied, access '/usr/lib/node_modules/bower']
+96 error   errno: -13,
+96 error   code: 'EACCES',
+96 error   syscall: 'access',
+96 error   path: '/usr/lib/node_modules/bower' }
+97 error Please try running this command again as root/Administrator.
+98 verbose exit [ -13, true ]

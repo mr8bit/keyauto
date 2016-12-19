@@ -1,0 +1,61 @@
+<div class="container " ng-controller="SellerController" style="width: 1080px">
+    <div class="row purple">
+        <div class="container-fluid" style="padding-right: 40px;padding-left: 40px">
+            <div class="col-md-12  ">
+                <h1>Адреса диллерских центров</h1>
+                <div style="margin-top: 25px">
+                    <ul class="nav nav-pills" style="margin-bottom: 25px">
+                        <li ng-repeat="city in citys" role="presentation"><a scroll-to-bookmark="city{{ city.id }}"  >{{ city.name }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row" style="background-color: #ffffff;margin-top:-5px">
+        <div class="container-fluid" style="overflow-y: scroll;height: 1605px;padding-left: 5px;padding-right: 5px">
+            <div class="col-md-12"  scroll-bookmark="city{{ city.id }}" ng-repeat="city in citys">
+                <h2 class="city-title">{{ city.name }}</h2>
+                <div class="col-md-4 card"  ng-repeat="seller in city.sellers">
+                    <div style="text-align:center;display:block;">
+                        <img src="{{ seller.image }}">
+                    </div>
+                    <div class="card-title">{{ seller.seller }}</div>
+                    <div class="contact-center">г. {{ seller.city }}, {{ seller.adress }},<br>
+                        тел./факс: {{ seller.phone }}
+                    </div>
+                    <div class="btn-group-seller">
+                        <a class="btn btn-primary">
+                            <img src="/static/img/point.png">
+                            Схема
+                        </a>
+                        <a class="btn btn-primary">
+                            <img src="/static/img/print.png">
+                            Печать
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(".navbar-brand").addClass('navbar-brand-sec');
+    </script>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('a[href^="#"]').click(function () {
+            elementClick = $(this).attr("href");
+            destination = $(elementClick).offset().top;
+            if ($.browser.safari) {
+                $('body').animate({scrollTop: destination}, 1100);
+            } else {
+                $('html').animate({scrollTop: destination}, 1100);
+            }
+            return false;
+        });
+    });
+</script>
